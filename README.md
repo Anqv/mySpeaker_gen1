@@ -8,13 +8,22 @@ writes an illustrated PDF.
 
 ## Setup
 
+The repo does not ship a ready-made environment. Most scripts need the
+third-party packages from `requirements.txt`:
+
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-The packages are already installed in the project's `.venv`.
+The previous `.venv` was removed on purpose and no system pip is installed
+in this workspace, so the venv has to be rebuilt on a machine that has pip.
+The crossover schematic tooling needs nothing beyond the standard library:
+
+```bash
+python3 lspcad_schematics.py
+```
 
 ## Run
 

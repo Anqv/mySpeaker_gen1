@@ -19,8 +19,12 @@ plus tooling to analyze and render it.
 
 ## Environment constraints (verified Nov 2026)
 
-- There is **no `.venv`** and no pip/ensurepip working in this environment,
-  despite what `README.md` claims. Do not trust the venv setup section.
+- The project `.venv` was **removed on purpose** (Nov 2026) and this
+  environment has **no pip/ensurepip/uv** on system `python3`. So
+  `analyze_speakers.py`, `crossover_design.py` and `plot_speaker_gui.py`
+  (numpy/pandas/matplotlib/PySide6) are **unrunnable here** until someone
+  rebuilds the venv on a machine that has pip. Don't trust a stale
+  `.venv` to exist.
 - `analyze_speakers.py` and `crossover_design.py` import numpy/pandas/
   matplotlib and may be **unrunnable here**. The newer schematic tooling
   is strictly stdlib-only (`zlib`, `struct`, `math`, `re`, `os`) and runs
